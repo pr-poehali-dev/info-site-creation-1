@@ -7,6 +7,7 @@ import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import MobileMenu from '@/components/MobileMenu';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const article = {
   title: 'Искусственный интеллект в 2025: новые горизонты',
@@ -110,11 +111,14 @@ export default function ArticleDetail() {
                 </h1>
               </div>
             </div>
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Статьи</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Новости</a>
-            </nav>
+            <div className="flex items-center gap-2">
+              <nav className="hidden md:flex items-center gap-6">
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Статьи</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Новости</a>
+              </nav>
+              <ThemeToggle />
+            </div>
             <MobileMenu
               logoElement={
                 <div className="flex items-center gap-2">

@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 import MobileMenu from '@/components/MobileMenu';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const categories = [
   { name: 'Технологии', icon: 'Cpu', color: 'bg-primary' },
@@ -107,14 +108,17 @@ export default function Index() {
                 InfoHub
               </h1>
             </div>
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Статьи</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Новости</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Категории</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">О проекте</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
-            </nav>
+            <div className="flex items-center gap-2">
+              <nav className="hidden md:flex items-center gap-6">
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Статьи</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Новости</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Категории</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">О проекте</a>
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
+              </nav>
+              <ThemeToggle />
+            </div>
             <MobileMenu
               logoElement={
                 <div className="flex items-center gap-2">

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import Icon from '@/components/ui/icon';
+import ThemeToggle from '@/components/ThemeToggle';
 
 interface MobileMenuProps {
   logoElement: React.ReactNode;
@@ -28,8 +29,11 @@ export default function MobileMenu({ logoElement }: MobileMenuProps) {
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
         <SheetHeader className="mb-8">
-          <SheetTitle className="flex items-center gap-2">
-            {logoElement}
+          <SheetTitle className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              {logoElement}
+            </div>
+            <ThemeToggle />
           </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col gap-2">
