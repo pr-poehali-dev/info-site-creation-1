@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -70,6 +71,7 @@ const news = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -200,6 +202,7 @@ export default function Index() {
                   <Card
                     key={article.id}
                     className="overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer group"
+                    onClick={() => navigate(`/article/${article.id}`)}
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img
