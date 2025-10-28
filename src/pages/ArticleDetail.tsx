@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import MobileMenu from '@/components/MobileMenu';
 
 const article = {
   title: 'Искусственный интеллект в 2025: новые горизонты',
@@ -114,6 +115,18 @@ export default function ArticleDetail() {
               <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Статьи</a>
               <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Новости</a>
             </nav>
+            <MobileMenu
+              logoElement={
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center">
+                    <Icon name="Sparkles" size={24} className="text-white" />
+                  </div>
+                  <span className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    InfoHub
+                  </span>
+                </div>
+              }
+            />
           </div>
         </div>
       </header>

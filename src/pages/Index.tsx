@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
+import MobileMenu from '@/components/MobileMenu';
 
 const categories = [
   { name: 'Технологии', icon: 'Cpu', color: 'bg-primary' },
@@ -114,9 +115,18 @@ export default function Index() {
               <a href="#" className="text-sm font-medium hover:text-primary transition-colors">О проекте</a>
               <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
             </nav>
-            <Button className="md:hidden" variant="ghost" size="icon">
-              <Icon name="Menu" size={24} />
-            </Button>
+            <MobileMenu
+              logoElement={
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center">
+                    <Icon name="Sparkles" size={24} className="text-white" />
+                  </div>
+                  <span className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    InfoHub
+                  </span>
+                </div>
+              }
+            />
           </div>
         </div>
       </header>
